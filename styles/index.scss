@@ -1,0 +1,115 @@
+
+:root {
+  
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+#counter{
+    font-size: 2rem;
+
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; 
+}
+body {
+	line-height: 1.6;
+    
+}
+#container{
+    height: 100dvh;
+    width: 100dvw;
+    max-height: 100dvh;
+    max-width: 100dvw;
+    overflow: hidden;
+    background-color: #A9BCD0;
+    color: #487281;
+}
+
+.counter {
+    &__current{
+        @debug &;
+        font-size: 8rem;
+        color: #FFBF81;
+    }
+
+    &__persec{
+        font-size: 4rem;
+        color: #FF69EB;
+    }
+}
+
+
+.powerups{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    padding: 10px;
+    background-color: #BFB7B6;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+   
+}
+.powerup{
+    background-color:#dabfb9;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #daa0e5;
+    }
+
+    display: grid;
+    gap: .4rem;
+    grid-template-columns: repeat(3, auto);
+
+    &__title{
+        grid-column: 1/3;
+        grid-row: 1/2;
+        
+    }
+
+    &__price{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        align-self: end;
+    }
+    &__amount{
+        grid-column: 3/4;
+        grid-row: 1/3;
+        font-size: 5rem;
+        justify-self: end;
+        align-self: center;
+    }
+    .profit{
+        grid-column: 2/3;
+        grid-row: 2/3;
+        align-self: end;
+    }
+}
+.playarea{
+    height: 50dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &__clicker{
+        height:50%;
+        transition: all .01s;
+        width: 30rem;
+        &:active{
+            transform: scale(1.1);
+        }
+    }
+}

@@ -1,0 +1,68 @@
+const increanseBtn = document.querySelector("#increase")
+const decreanseBtn = document.querySelector("#decrease")
+const counter = document.querySelector("h1")
+const zzBtn = document.querySelector("#zz")
+
+increanseBtn.addEventListener("click", () => {
+    counter.innerHTML = +counter.innerHTML + 1
+}) 
+
+decreanseBtn.addEventListener("click", () => {
+    counter.innerHTML = +counter.innerHTML - 1 
+}) 
+
+zzBtn.addEventListener("click", () => {
+    counter.innerHTML = +counter.innerHTML * 0 
+})
+
+
+
+-------------------------------
+:root {
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; 
+}
+
+body {
+	line-height: 1.6;
+}
+
+#container {
+   height: 100dvh;
+   width: 100dvw;
+   max-height: 100dvh;
+   max-width: 100dvw;
+   overflow: hidden;
+
+}
+.counter__current {
+    font-size: 8rem; 
+}
+
+.counter__persec {
+    font-size: 4rem; 
+}
+
+.playarea {
+    height: 50dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.playarea__cliker {
+    height: 60%;
+}
